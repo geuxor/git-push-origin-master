@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="navbar p-2">
+    <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary shadow my-5" %>
+  </div>
+
+<div class="container col-12">
+  <h1>My Tasty Cocktails</h1>
+  <p><strong>These cocktails are gonna make you spook!</strong></p>
+  <% @cocktails.each do |tail| %>
+    <div class="d-flex p-2">
+      <%= link_to cocktail_path(tail.id) do %>
+      <div class="card-product">
+        <img src="<%= tail.picture_url %>" />
+        <div class="card-product-infos">
+          <h2><%= tail.name %></h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>

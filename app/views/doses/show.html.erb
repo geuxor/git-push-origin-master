@@ -1,0 +1,10 @@
+<%= link_to 'List', doses_path, :class => "btn btn-primary shadow" %>
+<%= link_to 'New dose', new_dose_path, :class => "btn btn-primary shadow" %>
+<%= link_to 'Edit', edit_dose_path(@dose.id), :class => "btn btn-primary shadow" %>
+<%= link_to "Delete",
+            dose_path(@dose),
+            method: :delete,
+            data: { confirm: "Are you sure?" }, :class => "btn btn-primary shadow" %>
+
+<h2>Name: <%= @dose.name %></h2>
+<p>Picture: <%= @dose.picture_url %></p>
