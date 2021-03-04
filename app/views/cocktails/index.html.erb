@@ -13,7 +13,20 @@
         <img src="<%= tail.picture_url %>" />
         <div class="card-product-infos">
           <h2><%= tail.name %></h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          
+          <div class="d-flex p-2">
+              <ul>
+	          <% tail.doses.each do |dose| %>            
+            <li>
+                <%= dose.description %>
+                <%= dose.ingredient.name %>
+              </li>
+            <% end %>
+            </ul>
+           </div>
+          
+
+
         </div>
       </div>
       <% end %>
