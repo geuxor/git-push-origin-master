@@ -10,10 +10,12 @@ Cocktail.destroy_all
 Ingredient.destroy_all
 Ingredient.create(name: "potatos")
 Ingredient.create(name: "honey")
-Ingredient.create(name: "rom")
-Ingredient.create(name: "vodka")
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
+Ingredient.create(name: "vodka liters")
+Ingredient.create(name: "lemon slices")
+Ingredient.create(name: "ice cubes")
 Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "bird shit")
+Ingredient.create(name: "armpit hairs")
+
 puts "done"
 # TODO: CONNECT TO API
