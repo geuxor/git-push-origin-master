@@ -1,0 +1,21 @@
+<div class="container">
+<%= link_to 'List', cocktails_path, :class => "btn btn-primary shadow my-5" %>
+
+<div class="row m-16">
+  <%= simple_form_for @cocktail do |f| %>
+  <div class="row">
+    <div class="col-12">
+      <%= f.input :name %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <%= f.input :photo, as: :file %>
+    </div>
+  </div>
+  <div class="row justify-content-md-end">
+    <%= f.submit "Press me", :class => "btn btn-primary shadow" %>
+  </div>
+  <% end %>
+</div>
+</div>

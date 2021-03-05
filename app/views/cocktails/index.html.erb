@@ -1,42 +1,29 @@
-<div class="container">
-  <div class="navbar p-2">
+<div class="container col-9">
+  <div class="navbar p-2"> 
     <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary shadow my-5" %>
   </div>
-
-<div class="container col-12">
   <h1>My Tasty Cocktails</h1>
   <p><strong>These cocktails are gonna make you spook!</strong></p>
-  <% @cocktails.each do |tail| %>
-    <div class="d-flex p-2">
-      <%= link_to cocktail_path(tail.id) do %>
-      <div class="card-product">
-        <img src="<%= tail.picture_url %>" />
-        <div class="card-product-infos">
-          <h2><%= tail.name %></h2>
-          
-          <div class="d-flex p-2">
-              <ul>
-	          <% tail.doses.each do |dose| %>            
-            <li>
+
+
+  <div class="d-flex align-content-around flex-wrap">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: url('<%= cl_image_path cocktail.photo.key %>');">
+        <div class="card-description">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          <div class="flex-column p-2">
+            <% cocktail.doses.each do |dose| %>            
+              <div>
                 <%= dose.description %>
                 <%= dose.ingredient.name %>
-              </li>
+              </div>
             <% end %>
-            </ul>
            </div>
-          
-<%= cl_image_tag("dhxsvadttjpn3km22ewd", width: 400, height: 300, crop: :fill) %>
-<%= cl_image_tag("y79ssqsc11wmo6zasbqi", width: 200, height: 150, crop: :fill) %>
-      
-<%= cl_image_tag("ttlhpneranrgenufmrmt",
-      width: 150, height: 150, crop: :thumb, gravity: :face,
-      :overlay=>{:font_family=>"impact", :font_size=>150, :text=>"Yuhuuuu!!"},
-      ) %>
-
         </div>
       </div>
-      <% end %>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
+  
 </div>
+
+

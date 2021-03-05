@@ -6,23 +6,6 @@
             method: :delete,
             data: { confirm: "Are you sure?" }, :class => "btn btn-primary shadow" %>
 <br><br><br>
-<div class="row m-16">
-  <%= form_for @cocktail do |f| %>
-  <div class="row">
-    <%= f.label :name, "Name", :class => "col-3 col-form-label" %>
-    <div class="col-9">
-      <%= f.text_field :name, :class => "form-control mb-3" %>
-    </div>
-  </div>
-  <div class="row">
-    <%= f.label :picture_url, "Picture url", :class => "col-3 col-form-label" %>
-    <div class="col-9">
-      <%= f.text_area :picture_url, :class => "form-control mb-3" %>
-    </div>
-  </div>
-  <div class="row justify-content-md-end">
-    <%= f.submit :class => "btn btn-primary shadow" %>
-  </div>
-  <% end %>
-</div>
+<%= render "form" %>
+
 </div>
