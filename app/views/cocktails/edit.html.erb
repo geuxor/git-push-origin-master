@@ -1,11 +1,14 @@
-<div class="container">
-<%= link_to 'List', cocktails_path, :class => "btn btn-primary shadow my-5" %>
-<%= link_to 'New cocktail', new_cocktail_path, :class => "btn btn-primary shadow" %>
-<%= link_to "Delete",
-            cocktail_path(@cocktail),
-            method: :delete,
-            data: { confirm: "Are you sure?" }, :class => "btn btn-primary shadow" %>
-<br><br><br>
-<%= render "form" %>
+<div class="showimg" style="background-image: url('<%= cl_image_path @cocktail.photo.key %>');">
+  <div class="container vh-100">
+    <%= link_to 'List', cocktails_path, :class => "btn btn-primary shadow my-5" %>
+    <%= link_to 'New cocktail', new_cocktail_path, :class => "btn btn-primary shadow" %>
+    <%= link_to "Delete",
+                cocktail_path(@cocktail),
+                method: :delete,
+                data: { confirm: "Are you sure?" }, :class => "btn btn-primary shadow" %>
 
+    <br><br><br>
+    <%= render "form" %>
+
+  </div>
 </div>

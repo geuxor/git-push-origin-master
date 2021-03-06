@@ -1,64 +1,96 @@
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Cinzel&family=Cinzel+Decorative&family=Petit+Formal+Script&family=Sofia&display=swap');
+/*
+font-family: 'Arizonia', cursive;
+font-family: 'Cinzel', serif;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Petit Formal Script', cursive;
+font-family: 'Sofia', cursive;
+*/
+
+.showimg {
+  background-position: center;
+  background-size: cover;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
+.card-product {
+  overflow: hidden;
+  width: 100%;
+  //background: rgb(204, 204, 204);
+  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
   object-fit: cover;
+  
+  
 }
 
 .card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 36px;
+  font-weight: 600;
+  color: aliceblue;
+  text-shadow: 2px 1px 8px rgb(0, 0, 0), 0 0 1em rgba(129, 52, 0, 0.897), 0 0 1em rgba(39, 75, 117, 0.788);  
+  padding: 16px 0 16px 0;
 }
-
+.card-product-title {
+  padding: 0;
+}
 .card-product p {
-  font-size: 12px;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 24px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  font-weight: 600;
+  color: aliceblue;
+  text-shadow: 2px 1px 8px rgb(0, 0, 0), 0 0 1em rgba(129, 52, 0, 0.897), 0 0 1em rgba(39, 75, 117, 0.788);  
+  padding: 16px 0 16px 0;
+
 }
 
-.card-product .card-product-infos {
+.card-product-infos {
+  font-family: 'Cinzel Decorative', cursive;
   padding: 16px;
+  color: rgb(231, 248, 255);
+  font-weight: 500;
+  font-size: 20px;
+  text-shadow: 2px 2px 12px rgb(0, 0, 0), 0 0 1em rgba(129, 52, 0, 0.897), 0 0 1em rgba(39, 75, 117, 0.788);
 }
 
 .card-category {
-  margin: 16px;
+  margin: 8px;
   background-size: cover;
   background-position: center;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgb(109, 109, 109);
   border-radius: 5px;
   box-shadow: 2px 2px 15px rgb(0, 0, 0);
-  padding: 8px 16px;
+  padding: 16px 48px;
+  
 }
 
 .card-description {
-  color: rgb(255, 255, 255);
+  color: rgb(231, 248, 255);
   font-weight: 500;
   font-size: 20px;
-  text-shadow: 2px 1px 6px rgb(68, 68, 68), 0 0 1em rgba(12, 12, 12, 0.698), 0 0 1em rgba(255, 255, 255, 0.698);
+  text-shadow: 2px 1px 8px rgb(0, 0, 0), 0 0 1em rgba(129, 52, 0, 0.897), 0 0 1em rgba(39, 75, 117, 0.788);
 }
 
 .card-description a {
-  color: rgb(0, 81, 105);
-  font-weight: 600;
-  font-size: 32px;
-  text-shadow: 2px 2px 8px rgb(255, 255, 255), 0 0 1em rgba(145, 47, 17, 0.698), 0 0 1em rgba(255, 255, 255, 0.698);
+  text-decoration: none;
+  font-family: 'Cinzel Decorative', cursive;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 40px;
+  text-shadow: 3px 3px 8px rgb(46, 46, 46), 0 0 1em rgba(145, 47, 17, 0.993), 0 0 1em rgb(24, 2, 146);
   // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.key %>');
+}
+
+.del-icon {
+  text-shadow: none;
+  padding-left: 14px;
 }
