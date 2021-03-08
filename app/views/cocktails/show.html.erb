@@ -1,4 +1,5 @@
 <div class="showimg" style="background-image: url('<%= cl_image_path @cocktail.photo.key %>');">
+
   <div class="container vh-100">
     <div class="navbar justify-content-start"> 
       <%= link_to 'List', cocktails_path, :class => "btn btn-primary shadow mx-1" %>
@@ -11,16 +12,16 @@
     </div>
 
       <div class="card-product">
-      <div class="card-product-title">
-        <h2><%= @cocktail.name %></h2>
-        <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), :class => "btn btn-primary shadow" %>
-      </div>
-      <div class="card-product-infos">
+        <div class="card-product-title">
+          <h2><%= @cocktail.name %></h2>
+          <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), :class => "btn btn-primary shadow" %>
+        </div>
+        <div class="card-product-infos">
           <% @cocktail.doses.each do |dose| %>
             <div class="d-flex p-2">
-                <%= dose.description %>
-                <%= dose.ingredient.name %>
-                  <%= link_to dose_path(dose), method: :delete, data: { confirm: "Yeahh just do it!" } do %>
+              <%= dose.description %>
+              <%= dose.ingredient.name %>
+              <%= link_to dose_path(dose), method: :delete, data: { confirm: "Yeahh just do it!" } do %>
                 <i class="fas fa-trash del-icon"></i>
               <% end %>
             </div>
